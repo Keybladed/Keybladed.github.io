@@ -1,6 +1,6 @@
 body {
     background-color: rgb(20, 153, 197);
-    color: #012d41;
+    color: #000000;
   }
   
   h1 {
@@ -9,7 +9,7 @@ body {
   }
   
   a {
-    color: #249cd4;
+    color: #000000;
   }
   
   .block {
@@ -21,7 +21,7 @@ body {
     padding: 10px;
     text-align: center;
     font-size: 20px;
-    background-color: rgb(47, 0, 255);
+    background-color: rgb(119, 205, 255);
     position: relative
   }
   

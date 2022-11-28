@@ -24,6 +24,6 @@ function fancify(){
 
 function moo(){
     var txt = document.getElementById("textInput");
-    var split = txt.ariaValueMax.split(".");
+    var split = txt.value.split(".");
     txt.value = split.join("-Moo.");
 }

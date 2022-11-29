@@ -46,6 +46,6 @@ a {
   text-align: center;
   font-size: 20px;
   background-color: #e74c3c;
-  animation: bg-color 10s infinite;
+  animation: bg-color 5s infinite;
   position: relative
 }

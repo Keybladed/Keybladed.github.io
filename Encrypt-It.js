@@ -47,5 +47,5 @@
     function reset() {
       document.getElementById("input-text").value = "";
     }
-  
+
   })();

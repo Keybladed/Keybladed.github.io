@@ -49,3 +49,30 @@
     }
 
   })();
+
+function font(){
+  let input = document.getElementById("input-text");
+  let bigFont = document.getElementById("bigFont").checked;
+  let Lfont = document.getElementById("bigFont").value;
+  let smallFont = document.getElementById("smallFont").checked;
+  let Sfont = document.getElementById("smallFont").value;
+
+  if(bigFont){
+    input.style.fontSize = Lfont;
+  }
+
+  if(smallFont){
+    input.style.fontSize = Sfont;
+  }
+}
+
+function caps(){
+  let input = document.getElementById("input-text");
+  let upper = document.getElementById("all-caps").checked;
+
+  if(upper){
+    input.style.textTransform = "uppercase";
+  }else{
+    input.style.textTransform = "none";
+  }
+}

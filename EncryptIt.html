@@ -33,17 +33,17 @@
         <p>
           <strong>Font Size: </strong>
           <label>
-            <input checked type="radio" name="text-size" value="12pt">12pt</input>
+            <input checked type="radio" id="smallFont" name="text-size" value="12pt" onchange="font()">12pt</input>
           </label>
           <label>
-            <input type="radio" name="text-size" value="24pt">24pt</input>
+            <input type="radio" id="bigFont" name="text-size" value="24pt" onchange="font()">24pt</input>
           </label>
         </p>
         
         <p>
           <label>
             <strong>All-Caps:</strong>
-            <input id="all-caps" type="checkbox" name="uppercase-ouput" value="uppercase"/>
+            <input id="all-caps" type="checkbox" name="uppercase-ouput" value="uppercase" onchange ="caps()"/>
           </label>
         </p>
 

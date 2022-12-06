@@ -19,7 +19,6 @@
 const api_url = "https://api.ipify.org";
 
 function savedIP(){
-    let ip = document.getElementById("ip");
     let str = "";
     
     if(!localStorage.count){
@@ -28,7 +27,7 @@ function savedIP(){
         localStorage.count++;
     }
 
-    let temp = getapi(api_url);
+    getapi(api_url);
 
     for(let i = 1; i < localStorage.count; i++){
         str += localStorage.getItem(i) + "<br>";

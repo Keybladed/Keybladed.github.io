@@ -1,37 +1,36 @@
-$.getJSON("https://api.ipify.org?format=json", function(data) {
-    $("#ip").html(data.ip);
-})
-
 (function(){
     "use strict";
     
     window.addEventListener("load", init);
     
     function init(){
-        let clear = document.getElementById("reset")
-        clear.addEventListener("click", clear, false);
+        let clearbtn = document.getElementById("reset");
+        clearbtn.addEventListener("click", clear, false);
+        savedIP();
     }
 
+    var count = 1;
     function clear() {
-        window.localStorage.clear();
-        localStorage.count = 1;
+        localStorage.clear();
+        localStorage.count = 0;
+        savedIP();
     }
-
+    
     function savedIP(){
         let ip = document.getElementById("ip");
-        let str;
+        let str = "";
 
         if(!localStorage.count){
-            localStorage.count = 1
+            localStorage.count = 1;
         }else{
-            localStorage.count + 1
+            localStorage.count++;
         }
-        window.localStorage.setItem(localStorage.count, ip);
+
+        localStorage.setItem(localStorage.count, ip.textContent);
 
         for(let i = 1; i < localStorage.count; i++){
-            str += window.localStorage.getItem(i) + "\n";
+            str += localStorage.getItem(i) + "<br>";
         }
-        document.getElementById("saved").innerHTML=str;
+        document.getElementById("saved").innerHTML = str;
     }
-})
-
+})();

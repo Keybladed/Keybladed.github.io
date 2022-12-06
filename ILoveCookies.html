@@ -1,9 +1,15 @@
 <html>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            $.getJSON("https://api.ipify.org?format=json", function(data) {
+                $("#ip").html(data.ip);
+            })
+        </script>
+    <script src="ILoveCookies.js"></script>
     <head>
+        <meta charset="utf-8" />
         <title>Assignment 9</title>
         <link rel="stylesheet" href="style9.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="ILoveCookies.js"></script>
     </head>
     <body>
         <h1>Assignment 9</h1>
@@ -11,6 +17,6 @@
         <p id="ip"></p>
         <h1>Saved IP addresses</h1>
         <button id="reset">Clear</button>
-        <p src="saved" onload="savedIP()"></p>
+        <p id="saved"></p>
     </body>
 </html>
